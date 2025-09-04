@@ -1,13 +1,13 @@
-import ForWatching from "./ForWatching";
+import MovieInterface from "./MovieInterface";
 
 export default class Cart {
-  private _items: ForWatching[] = [];
+  private _items: MovieInterface[] = [];
 
-  public add(item: ForWatching): void {
+  public add(item: MovieInterface): void {
     this._items.push(item);
   }
 
-  public get items(): ForWatching[] {
+  public get items(): MovieInterface[] {
     return [...this._items];
   }
 
@@ -21,6 +21,6 @@ export default class Cart {
   }
 
   public delete(id: number): void {
-     this._items = this._items.filter((item) => item.id !== id);
+    this._items = this._items.filter((item) => item.id !== id);
   }
 }
